@@ -46,6 +46,21 @@ function main() {
             });
           });
 
+          $(document).ready(function() {
+            $("#readmore3").click(function() {
+              var elem = $("#readmore3").text();
+              if (elem == "...") {
+                //Stuff to do when btn is in the read more state
+                $("#readmore3").text("Thu Gọn");
+                $("#text3").slideDown();
+              } else {
+                //Stuff to do when btn is in the read less state
+                $("#readmore3").text("...");
+                $("#text3").slideUp();
+              }
+            });
+          });
+
         // Show Menu on Book
         $(window).bind('scroll', function () {
             var navHeight = $(window).height() - 500;
